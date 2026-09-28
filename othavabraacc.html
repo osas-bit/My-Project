@@ -6,23 +6,27 @@
     <title>image gallery iphone assignment</title>
     <script src="https://kit.fontawesome.com/48ba507fa5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/othavabraacc.css">
-</head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
 <body> 
 
-
-     <!-- STICKY NAVBAR -->
+      <!-- STICKY NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top py-1">
     <div class="container">
 
-        <!-- YOUR LOGO -->
+        <!-- LOGO -->
         <a class="navbar-brand" href="index.html">
-            <img src="image/mybuss.png" alt="" width="300" height="60">
+            <img src="image/mybuss.png"
+                 alt="Osas Mobile Enterprise"
+                 width="300"
+                 height="60">
         </a>
 
-        <!-- Mobile Menu Button -->
-        <button class="navbar-toggler" type="button"
+        <!-- MOBILE MENU BUTTON -->
+        <button class="navbar-toggler"
+                type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
                 aria-controls="navbarNav"
@@ -32,24 +36,32 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- NAVIGATION LINKS -->
+
+        <!-- NAVIGATION -->
         <div class="collapse navbar-collapse" id="navbarNav">
 
+            <!-- MAIN NAVIGATION LINKS -->
             <ul class="navbar-nav">
 
+                <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link fs-5 text-white" href="index.html">
+                    <a class="nav-link active fs-5 text-white"
+                       href="index.html">
                         Home
                     </a>
                 </li>
 
+
+                <!-- ABOUT US -->
                 <li class="nav-item">
-                    <a class="nav-link active fs-5 text-white" href="aboutus.html">
+                    <a class="nav-link fs-5 text-white"
+                       href="aboutus.html">
                         About Us
                     </a>
                 </li>
 
-                <!-- Services -->
+
+                <!-- SERVICES -->
                 <li class="nav-item dropdown">
 
                     <a class="nav-link dropdown-toggle fs-5 text-white"
@@ -64,19 +76,22 @@
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="phonesiph.html">
+                            <a class="dropdown-item"
+                               href="phonesiph.html">
                                 iPhones
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="phonessam.html">
+                            <a class="dropdown-item"
+                               href="phonessam.html">
                                 Samsung
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="othavabraacc.html">
+                            <a class="dropdown-item"
+                               href="othavabraacc.html">
                                 Other Phone Brands & Accessories
                             </a>
                         </li>
@@ -84,22 +99,478 @@
                     </ul>
                 </li>
 
+
+                <!-- CART -->
                 <li class="nav-item">
-                    <a class="nav-link fs-5 text-white" href="contactus.html">
+                    <a class="nav-link fs-5 text-white"
+                       href="cart.html">
+
+                        Cart
+                        <i class="bi bi-cart3 text-primary"></i>
+
+                    </a>
+                </li>
+
+
+                <!-- CONTACT US -->
+                <li class="nav-item">
+                    <a class="nav-link fs-5 text-white"
+                       href="contactus.html">
                         Contact Us
                     </a>
                 </li>
 
+
+                <!-- FAQ -->
                 <li class="nav-item">
-                    <a class="nav-link fs-5 text-white" href="index.html#faq">
+                    <a class="nav-link fs-5 text-white"
+                       href="index.html#faq">
                         FAQ
                     </a>
                 </li>
 
             </ul>
+
+
+            <!-- LOGIN / SIGN UP -->
+            <!-- ms-auto pushes this to the right -->
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+
+                    <a class="nav-link login-nav-link fs-5 text-white"
+                       href="#"
+                       data-bs-toggle="modal"
+                       data-bs-target="#staticBackdrop">
+
+                        <i class="bi bi-person-circle"></i>
+                        Login / Sign Up
+
+                    </a>
+
+                </li>
+
+            </ul>
+
         </div>
     </div>
 </nav>
+
+    
+
+       <!-- Login / Sign Up Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Welcome to Osas Mobile Enterprise!
+                </h1>
+
+                <button type="button" class="btn-close"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <!-- Login / Sign Up Tabs -->
+                <ul class="nav nav-tabs mb-4" id="loginTabs">
+
+                    <li class="nav-item">
+                        <button class="nav-link active"
+                            data-bs-toggle="tab"
+                            data-bs-target="#login"
+                            type="button">
+                            Login
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#signup"
+                            type="button">
+                            Sign Up
+                        </button>
+                    </li>
+
+                </ul>
+
+
+                <div class="tab-content">
+
+                    <!-- ================= LOGIN ================= -->
+                    <div class="tab-pane fade show active" id="login">
+
+                        <form action="#" method="post">
+
+                            <!-- Email -->
+                            <div class="form-floating mb-3">
+
+                                <input type="email"
+                                    class="form-control"
+                                    id="loginEmail"
+                                    placeholder="Email Address"
+                                    required>
+
+                                <label for="loginEmail">
+                                    Email Address
+                                </label>
+
+                            </div>
+
+
+                            <!-- Password -->
+                            <div class="form-floating mb-3">
+
+                                <input type="password"
+                                    class="form-control"
+                                    id="loginPassword"
+                                    placeholder="Password"
+                                    required>
+
+                                <label for="loginPassword">
+                                    Password
+                                </label>
+
+                            </div>
+
+
+                            <!-- Remember Me -->
+                            <div class="form-check mb-3">
+
+                                <input class="form-check-input"
+                                    type="checkbox"
+                                    id="rememberMe">
+
+                                <label class="form-check-label"
+                                    for="rememberMe">
+                                    Remember me
+                                </label>
+
+                            </div>
+
+
+                            <!-- Login Button -->
+                            <button type="submit"
+                                class="btn btn-primary w-100">
+                                Login
+                            </button>
+
+
+                            <!-- Forgot Password -->
+                            <div class="text-center mt-3">
+
+                                <a href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#forgotPasswordModal"
+                                    data-bs-dismiss="modal">
+                                    Forgot Password?
+                                </a>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- ================= SIGN UP ================= -->
+                    <div class="tab-pane fade" id="signup">
+
+                        <form action="#" method="post">
+
+                            <div class="row g-3">
+
+                                <!-- Name -->
+                                <div class="col-sm-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="text"
+                                            class="form-control"
+                                            id="name"
+                                            placeholder="Name"
+                                            required>
+
+                                        <label for="name">
+                                            Name
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Email -->
+                                <div class="col-sm-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="email"
+                                            class="form-control"
+                                            id="email"
+                                            placeholder="Email Address"
+                                            required>
+
+                                        <label for="email">
+                                            Email Address
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Phone -->
+                                <div class="col-sm-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="tel"
+                                            class="form-control"
+                                            id="phone"
+                                            placeholder="Phone Number"
+                                            required>
+
+                                        <label for="phone">
+                                            Phone Number
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Gender -->
+                                <div class="col-sm-6">
+
+                                    <div class="form-floating">
+
+                                        <select class="form-select"
+                                            id="gender"
+                                            required>
+
+                                            <option value="" selected disabled>
+                                                Select Gender
+                                            </option>
+
+                                            <option value="male">
+                                                Male
+                                            </option>
+
+                                            <option value="female">
+                                                Female
+                                            </option>
+
+                                            <option value="other">
+                                                Other
+                                            </option>
+
+                                        </select>
+
+                                        <label for="gender">
+                                            Gender
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Password -->
+                                <div class="col-12">
+
+                                    <div class="form-floating">
+
+                                        <input type="password"
+                                            class="form-control"
+                                            id="signupPassword"
+                                            placeholder="Password"
+                                            required>
+
+                                        <label for="signupPassword">
+                                            Password
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Confirm Password -->
+                                <div class="col-12">
+
+                                    <div class="form-floating">
+
+                                        <input type="password"
+                                            class="form-control"
+                                            id="confirmPassword"
+                                            placeholder="Confirm Password"
+                                            required>
+
+                                        <label for="confirmPassword">
+                                            Confirm Password
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Terms -->
+                                <div class="col-12">
+
+                                    <div class="form-check">
+
+                                        <input class="form-check-input"
+                                            type="checkbox"
+                                            id="terms"
+                                            required>
+
+                                        <label class="form-check-label"
+                                            for="terms">
+
+                                            I agree to the
+                                            <a href="pptccp.html">
+                                                Terms & Conditions
+                                            </a>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Create Account -->
+                                <div class="col-12">
+
+                                    <button type="submit"
+                                        class="btn btn-primary w-100">
+                                        Create Account
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+
+                <button type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= FORGOT PASSWORD MODAL ================= -->
+
+<div class="modal fade" id="forgotPasswordModal"
+    tabindex="-1"
+    aria-labelledby="forgotPasswordLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+
+                <h1 class="modal-title fs-5"
+                    id="forgotPasswordLabel">
+                    Forgot Password?
+                </h1>
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+
+            </div>
+
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <p class="text-muted">
+                    Enter your email address and we'll send you
+                    a link to reset your password.
+                </p>
+
+
+                <form action="#" method="post">
+
+                    <!-- Email -->
+                    <div class="form-floating mb-3">
+
+                        <input type="email"
+                            class="form-control"
+                            id="resetEmail"
+                            placeholder="Email Address"
+                            required>
+
+                        <label for="resetEmail">
+                            Email Address
+                        </label>
+
+                    </div>
+
+
+                    <!-- Send Button -->
+                    <button type="submit"
+                        class="btn btn-primary w-100">
+                        Send Reset Link
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Footer -->
+            <div class="modal-footer">
+
+                <button type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
     
 
     

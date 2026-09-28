@@ -1,535 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
-    <script src="https://kit.fontawesome.com/48ba507fa5.js" crossorigin="anonymous"></script>
+    <title>jhoseegadgethub</title>
+    <link rel="shortcut icon" href="indeximg/download (1).png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
     <style>
-        
-        Style 
-
-/* =========================
-           GENERAL STYLES
-        ========================== */
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #222;
-            background-color: #f8f9fa;
+            background: #f6f7f9;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-
-        /* =========================
-           NAVBAR
-        ========================== */
-
-        nav {
-            background-color: #0dcaf0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .navbar {
-            min-height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo img {
-            width: 220px;
-            height: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a {
+        
+        .btn-cart {
+            background: rgb(245, 53, 53);
             color: white;
-            font-weight: bold;
+            padding: 9px 10px;
+            border-radius: 8px;
             transition: 0.3s;
+            font-weight: 600;
+            margin: 5px;
+            box-shadow: 0 3px 3px rgb(70, 69, 69);
         }
 
-        .nav-links a:hover,
-        .nav-links .active {
-            color: #222;
+        .btn-cart:hover {
+            background: rgb(136, 28, 28);
+            color: white;
         }
 
-        /* Mobile menu button */
-        .menu-btn {
-            display: none;
-            background: none;
+        .btn1 {
+            background: blue;
+            color: white;
             border: none;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-
-        /* =========================
-           HERO SECTION
-        ========================== */
-
-        .hero {
-            min-height: 430px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-
-            background:
-                 #111827;
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-content {
-            width: 100%;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: auto;
-        }
-
-
-        /* =========================
-           SECTION GENERAL
-        ========================== */
-
-        section {
-            padding: 70px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 36px;
-            color: #222;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #666;
-            max-width: 650px;
-            margin: auto;
-        }
-
-
-        /* =========================
-           WHO WE ARE
-        ========================== */
-
-        .about {
-            background-color: white;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .about-text h2 {
-            font-size: 35px;
-            margin-bottom: 20px;
-            color: #0b7285;
-        }
-
-        .about-text p {
-            color: #555;
-            margin-bottom: 18px;
-        }
-
-        .about-text strong {
-            color: #222;
-        }
-
-
-        /* =========================
-           MISSION & VISION
-        ========================== */
-
-        .mission-section {
-            background-color: #f1faff;
-        }
-
-        .mission-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .mission-card {
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            padding: 12px 28px;
+            border-radius: 9px;
             transition: 0.3s;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: larger;
+            box-shadow: 0 8px 5px black;
         }
 
-        .mission-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .mission-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            background-color: #0dcaf0;
+        .btn1:hover {
+            background: black;
             color: white;
+        }
+
+        .btn-dark-custom {
+            margin-left: 5px;
+            background: white;
+            color: black;
+            padding: 8px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-weight: 600;
+            box-shadow: 0 3px 3px rgb(70, 69, 69);
+        }
+
+        .btn-dark-custom:hover {
+            background: black;
+            color: white;
+        }
+
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-number {
+            position: absolute;
+            top: -7px;
+            right: -10px;
+            background: darkorchid;
+            color: white;
+            font-size: 11px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
         }
 
-        .mission-card h3 {
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .mission-card p {
-            color: #666;
-        }
-
-
-        /* =========================
-           WHY CHOOSE US
-        ========================== */
-
-        .why-us {
-            background-color: white;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-
-        .feature {
-            text-align: center;
-            padding: 30px 20px;
-            border: 1px solid #eee;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .feature:hover {
-            transform: translateY(-6px);
-            border-color: #0dcaf0;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .feature h3 {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .feature p {
-            color: #666;
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           STATS
-        ========================== */
-
-        .stats {
-            background-color: #0dcaf0;
+        /* CART HEADER */
+        .cart-header {
+            background: #111827;
             color: white;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            padding: 55px 20px;
             text-align: center;
         }
 
-        .stat h2 {
-            font-size: 40px;
-        }
-
-        .stat p {
-            font-size: 16px;
-        }
-
-
-        /* =========================
-           CALL TO ACTION
-        ========================== */
-
-        .cta {
-            background-color: #111;
-            color: white;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .cta p {
-            max-width: 650px;
-            margin: 0 auto 25px;
-            color: #ccc;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background-color: #0dcaf0;
-            color: white;
-            padding: 13px 30px;
-            border-radius: 30px;
+        .cart-header h1 {
+            font-size: 42px;
             font-weight: bold;
-            transition: 0.3s;
         }
 
-        .cta-btn:hover {
-            background-color: white;
-            color: #111;
+        .cart-header p {
+            color: #ddd;
         }
-
-
-       
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #aaa;
-        }
-
 
         /* =========================
-           TABLET
-        ========================== */
-
-        @media (max-width: 900px) {
-
-            .nav-links {
-                gap: 15px;
-            }
-
-            .hero h1 {
-                font-size: 45px;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image {
-                order: 1;
-            }
-
-            .about-text {
-                order: 2;
-            }
-
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 35px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+       cart section
+       ========================= */
+        .cart-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            overflow: hidden;
         }
 
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media (max-width: 700px) {
-
-            .container {
-                width: 92%;
-            }
-
-            .navbar {
-                min-height: 65px;
-            }
-
-            .logo img {
-                width: 180px;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 65px;
-                left: 0;
-                width: 100%;
-                background-color: #0dcaf0;
-                flex-direction: column;
-                padding: 20px 0;
-                gap: 18px;
-            }
-
-            .nav-links:target {
-                display: flex;
-            }
-
-            .hero {
-                min-height: 350px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 17px;
-                padding: 0 15px;
-            }
-
-            section {
-                padding: 50px 0;
-            }
-
-            .section-title h2 {
-                font-size: 30px;
-            }
-
-            .about-image img {
-                height: 300px;
-            }
-
-            .about-text h2 {
-                font-size: 28px;
-            }
-
-            .mission-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .stat h2 {
-                font-size: 32px;
-            }
-
-            .cta h2 {
-                font-size: 28px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-logo img {
-                margin-left: auto;
-                margin-right: auto;
-            }
+        .cart-row {
+            border-bottom: 1px solid var(--border);
+            padding: 18px;
         }
 
-
-        /* =========================
-           VERY SMALL PHONES
-        ========================== */
-
-        @media (max-width: 400px) {
-
-            .logo img {
-                width: 155px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .hero p {
-                font-size: 15px;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .mission-card {
-                padding: 30px 20px;
-            }
+        .cart-row:last-child {
+            border-bottom: none;
         }
 
+        .section-title {
+            font-weight: 800;
+            font-size: 50px;
+            color: whitesmoke;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-subtitle {
+            color: whitesmoke;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
         /* ==============================
    LOGIN / SIGN UP NAVBAR
 ================================= */
@@ -562,12 +173,43 @@
     }
 
 }
+
+       
     </style>
 </head>
-    
-<body>
 
-   <!-- STICKY NAVBAR -->
+<body>
+    <!-- ==================================================
+     TOP BAR
+================================================== -->
+
+    <div class="top-bar">
+
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+                    <i class="bi bi-truck me-1"></i>
+                    Free delivery on first selected orders
+                </div>
+
+                <div class="d-none d-md-block">
+                    <a href="contactus.html" class="costomer text-decoration-none text-primary">
+                        <i class="bi bi-telephone me-1"></i>
+                        Customer Support
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- =========================
+     NAVIGATION
+     ========================== -->
+     <!-- STICKY NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top py-1">
     <div class="container">
 
@@ -711,7 +353,7 @@
     </div>
 </nav>
 
-   <!-- Login / Sign Up Modal -->
+      <!-- Login / Sign Up Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
     data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -1122,321 +764,136 @@
 
 </div>
 
-   
-      <!-- =========================
-         HERO
-    ========================== -->
-
-    <section class="hero">
-
-        <div class="container hero-content">
-
-            <h1>About Us</h1>
-
-            <p>
-                Your trusted destination for quality smartphones,
-                accessories and reliable mobile solutions.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         WHO WE ARE
-    ========================== -->
-
-    <section class="about">
-
-        <div class="container">
-
-            <div class="about-content">
-
-                <div class="about-image">
-
-                    <img src="image/iph-17promax.jpg"
-                         alt="Smartphones">
-
-                </div>
-
-
-                <div class="about-text">
-
-                    <h2>Who We Are</h2>
-
-                    <p>
-                        Welcome to <strong>OSAS MOBILE ENTERPRISE</strong>,
-                        your trusted destination for quality smartphones
-                        and mobile accessories.
-                    </p>
-
-                    <p>
-                        We provide a wide range of smartphones from popular
-                        brands including iPhone, Samsung, Tecno, Infinix,
-                        itel and other trusted brands.
-                    </p>
-
-                    <p>
-                        Our goal is simple: to make it easier for our
-                        customers to find the right phone at a price that
-                        suits their needs.
-                    </p>
-
-                    <p>
-                        Whether you are looking for a powerful smartphone,
-                        an affordable device or useful accessories, we are
-                        here to help you make the right choice.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         MISSION & VISION
-    ========================== -->
-
-    <section class="mission-section">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Our Mission & Vision</h2>
-
-                <p>
-                    We are committed to providing a better mobile shopping
-                    experience for every customer.
-                </p>
-
-            </div>
-
-
-            <div class="mission-grid">
-
-                <!-- Mission -->
-
-                <div class="mission-card">
-
-                    <div class="mission-icon">
-                        🎯
-                    </div>
-
-                    <h3>Our Mission</h3>
-
-                    <p>
-                        To provide customers with quality mobile phones
-                        and accessories while delivering excellent
-                        customer service and a convenient shopping
-                        experience.
-                    </p>
-
-                </div>
-
-
-                <!-- Vision -->
-
-                <div class="mission-card">
-
-                    <div class="mission-icon">
-                        🚀
-                    </div>
-
-                    <h3>Our Vision</h3>
-
-                    <p>
-                        To become a trusted and recognized mobile phone
-                        retailer known for quality products, honest
-                        service and customer satisfaction.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         WHY CHOOSE US
-    ========================== -->
-
-    <section class="why-us">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Why Choose Us?</h2>
-
-                <p>
-                    We put our customers first and work hard to give you
-                    a smooth and reliable shopping experience.
-                </p>
-
-            </div>
-
-
-            <div class="features">
-
-
-                <div class="feature">
-
-                    <div class="feature-icon">
-                        📱
-                    </div>
-
-                    <h3>Quality Phones</h3>
-
-                    <p>
-                        Shop from a variety of smartphones from popular
-                        and trusted brands.
-                    </p>
-
-                </div>
-
-
-                <div class="feature">
-
-                    <div class="feature-icon">
-                        💰
-                    </div>
-
-                    <h3>Affordable Prices</h3>
-
-                    <p>
-                        We aim to provide competitive prices that give
-                        our customers great value.
-                    </p>
-
-                </div>
-
-
-                <div class="feature">
-
-                    <div class="feature-icon">
-                        🤝
-                    </div>
-
-                    <h3>Trusted Service</h3>
-
-                    <p>
-                        We believe in treating our customers with honesty,
-                        respect and professionalism.
-                    </p>
-
-                </div>
-
-
-                <div class="feature">
-
-                    <div class="feature-icon">
-                        ⚡
-                    </div>
-
-                    <h3>Easy Shopping</h3>
-
-                    <p>
-                        Find your preferred phone and accessories with
-                        a simple and convenient shopping experience.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         BUSINESS STATS
-    ========================== -->
-
-    <section class="stats">
-
-        <div class="container">
-
-            <div class="stats-grid">
-
-                <div class="stat">
-
-                    <h2>100+</h2>
-
-                    <p>Phones Available</p>
-
-                </div>
-
-
-                <div class="stat">
-
-                    <h2>10+</h2>
-
-                    <p>Phone Brands</p>
-
-                </div>
-
-
-                <div class="stat">
-
-                    <h2>24/7</h2>
-
-                    <p>Customer Support</p>
-
-                </div>
-
-
-                <div class="stat">
-
-                    <h2>100%</h2>
-
-                    <p>Customer Focus</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CALL TO ACTION
-    ========================== -->
-
-    <section class="cta">
-
-        <div class="container">
-
-            <h2>Ready to Get Your Next Phone?</h2>
-
-            <p>
-                Explore our collection of smartphones and accessories
-                and find the device that fits your needs.
-            </p>
-
-            <a href="phonesiph.html" class="cta-btn">
-                Shop Now
-            </a>
-
-        </div>
-
-    </section>
     
-      
-     
-      <footer class="bg-dark text-white mt-5">
+
+    <!-- CART HEADER -->
+    <div class="container">
+
+        <section class="cart-header">
+
+            <div class="container">
+
+                <h1>
+                    <i class="bi bi-cart3"></i>
+                    Your Shopping Cart
+                </h1>
+
+                <p>
+                    Review before completing your purchase.
+                </p>
+
+            </div>
+
+        </section>
+    </div>
+    <!-- =========================
+       cart
+       ========================= -->
+    <section id="cart" class="section-padding bg-soft mb-5 ">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mt-3">Shopping Cart</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="cart-card">
+                        <div class="cart-row">
+                            <div class="row align-items-center g-3">
+                                <div class="col-3 col-md-2">
+                                    <img class="img-fluid rounded-3"
+                                        src="image/iph-17promax.jpg"
+                                        alt="Smartphone">
+                                </div>
+                                <div class="col-9 col-md-5">
+                                    <h6 class="fw-bold mb-1">IPHONE 17 PRO MAX</h6>
+                                    <small class="text-secondary">Smartphone</small>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <span class="fw-bold">Qty: 1</span>
+                                </div>
+                                <div class="col-6 col-md-3 text-md-end">
+                                    <span class="fw-bold">₦1,300,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="cart-row">
+                            <div class="row align-items-center g-3">
+                                <div class="col-3 col-md-2">
+                                    <img class="img-fluid rounded-3"
+                                        src="image/S25.jpg"
+                                        alt="Smartphone">
+                                </div>
+                                <div class="col-9 col-md-5">
+                                    <h6 class="fw-bold mb-1">Samsung Galaxy S25 Ultra 5G - 512GB ROM - 12GB</h6>
+                                    <small class="text-secondary">Smartphone</small>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <span class="fw-bold">Qty: 1</span>
+                                </div>
+                                <div class="col-6 col-md-3 text-md-end">
+                                    <span class="fw-bold">₦1,365,639</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="cart-row">
+                            <div class="row align-items-center g-3">
+                                <div class="col-3 col-md-2">
+                                    <img class="img-fluid rounded-3"
+                                        src="image/IN60.jpg"
+                                        alt="Smartphone">
+                                </div>
+                                <div class="col-9 col-md-5">
+                                    <h6 class="fw-bold mb-1">Infinix Note 60 Pro 5G - 6.78" - 256GB ROM - 8GB</h6>
+                                    <small class="text-secondary">Smartphone</small>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <span class="fw-bold">Qty: 1</span>
+                                </div>
+                                <div class="col-6 col-md-3 text-md-end">
+                                    <span class="fw-bold">₦720,509</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="cart-card p-4">
+                        <h5 class="fw-bold">Order Summary</h5>
+
+                        <div class="d-flex justify-content-between py-2">
+                            <span>Subtotal</span>
+                            <strong>₦3,386,148</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between py-2">
+                            <span>Delivery</span>
+                            <strong>₦15,000</strong>
+                        </div>
+                        <span style="font-size: 18px; font-weight: bold;">Thanks for your purchase.</span>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between py-2 fs-5">
+                            <strong>Total</strong>
+                            <strong class="text-primary">₦3,386,163</strong>
+                        </div>
+                        <br>
+                        <a href="#contact" class="btn1 btn-brand w-100 mt-3">
+                            Proceed to Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+       FOOTER
+       ========================= -->
+    <footer class="bg-dark text-white mt-5">
     <!-- NEWSLETTER SECTION -->
     <div class="bg-info py-4">
         <div class="container">
@@ -1656,12 +1113,11 @@
 
      </footer>
 
-    
-     
-    
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
 </html>

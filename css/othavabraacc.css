@@ -1,31 +1,105 @@
-div.iphgallery {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(5,1fr);
-    
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
 }
-div.iphgallery-item {
-    margin: 5px;
-    border: 1px solid coral;
-    
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
-img {
-    height: 200px;
-    width: 200px;
-}
-div.iphgallery-item:hover {
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.9), 0px 6px 20px 0px rgba(0, 0, 0, 0.8);
-}
-div.iphgallery-item img {
-    height: auto;
-   
-}
+
 a {
     text-decoration: none;
 }
-div.iphgallery-item div.description {
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 300px;
+    height: 60px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   PRODUCT GALLERY
+========================= */
+
+.iphgallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
     padding: 10px;
 }
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.iphgallery-item {
+    min-width: 0;
+    margin: 0;
+    border: 1px solid coral;
+    background-color: white;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.iphgallery-item:hover {
+    box-shadow:
+        0px 4px 8px rgba(0, 0, 0, 0.4),
+        0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.iphgallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.iphgallery-item .description {
+    padding: 10px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
 .cart-btn {
     background-color: #f68b1e;
     color: white;
@@ -35,21 +109,170 @@ div.iphgallery-item div.description {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 8px;
+    max-width: 100%;
 }
+
 .cart-btn i {
     margin-right: 6px;
 }
+
 .cart-btn:hover {
     background-color: #e57b0b;
 }
-.navbar {
-        padding-top: 4px !important;
-        padding-bottom: 4px !important;
+
+
+/* =========================
+   SMALL DESKTOP / LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+    .iphgallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-.navbar-brand img {
-        width: 300px;
-        height: 60px;
-        object-fit: contain;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .iphgallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    
+
+    .navbar-brand img {
+        width: 230px;
+        height: 55px;
+    }
+
+}
+
+
+/* =========================
+   LARGE PHONE
+========================= */
+
+@media (max-width: 767.98px) {
+
+    .iphgallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .navbar-brand img {
+        width: 200px;
+        height: 50px;
+    }
+
+    .iphgallery-item .description {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .cart-btn {
+        width: 100%;
+        padding: 9px 8px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media (max-width: 575.98px) {
+
+    .iphgallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .navbar-brand img {
+        width: 170px;
+        height: 45px;
+    }
+
+    .iphgallery-item .description {
+        padding: 7px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .cart-btn {
+        width: 100%;
+        padding: 8px 5px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONE
+========================= */
+
+@media (max-width: 400px) {
+
+    .iphgallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .navbar-brand img {
+        width: 150px;
+        height: 42px;
+    }
+
+    .iphgallery-item .description {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .cart-btn {
+        width: auto;
+        padding: 9px 12px;
+    }
+
+}
+/* ==============================
+   LOGIN / SIGN UP NAVBAR
+================================= */
+
+.login-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+
+/* Keep login on the right on larger screens */
+@media (min-width: 992px) {
+
+    .login-nav-link {
+        margin-left: 15px;
+    }
+
+}
+
+
+/* Mobile / tablet */
+@media (max-width: 991.98px) {
+
+    .login-nav-link {
+        margin-top: 5px;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+}

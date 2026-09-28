@@ -154,3 +154,35 @@
                 font-size: 14px;
             }
         }
+        /* ==============================
+   LOGIN / SIGN UP NAVBAR
+================================= */
+
+.login-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+
+/* Keep login on the right on larger screens */
+@media (min-width: 992px) {
+
+    .login-nav-link {
+        margin-left: 15px;
+    }
+
+}
+
+
+/* Mobile / tablet */
+@media (max-width: 991.98px) {
+
+    .login-nav-link {
+        margin-top: 5px;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+}
