@@ -58,7 +58,7 @@ a {
 .iphgallery-item {
     min-width: 0;
     margin: 0;
-    border: 1px solid coral;
+    border: 1px solid lightblue;
     background-color: white;
     overflow: hidden;
     transition: box-shadow 0.2s ease;
@@ -100,7 +100,7 @@ a {
 ========================= */
 
 .cart-btn {
-    background-color: #f68b1e;
+    background-color: blue;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -117,7 +117,7 @@ a {
 }
 
 .cart-btn:hover {
-    background-color: #e57b0b;
+    background-color: #111827;
 }
 
 

@@ -101,7 +101,7 @@ a {
 ========================= */
 
 .cart-btn {
-    background-color: #f68b1e;
+    background-color: blue;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -118,7 +118,7 @@ a {
 }
 
 .cart-btn:hover {
-    background-color: #e57b0b;
+    background-color: #111827;
 }
 
 
